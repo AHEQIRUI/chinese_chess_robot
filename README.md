@@ -196,3 +196,5 @@ nc -zv 192.168.137.60 5000
 ## Demo
 
 ![image](https://github.com/AHEQIRUI/chinese_chess_robot/blob/main/demo/demo1.gif)
+
+![image](https://github.com/AHEQIRUI/chinese_chess_robot/blob/main/demo/demo2.gif)
