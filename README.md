@@ -6,6 +6,11 @@ A Chinese Chess (Xiangqi) Robot Arm System that plays autonomously against human
 
 This system implements an autonomous Chinese Chess playing robot arm system, running on Raspberry Pi 5. It uses computer vision to detect the board and pieces, combines with a UCI engine to get the best moves, and controls a DOFBOT 6-axis robot arm to complete piece grabbing and placement operations.
 
+
+## Demo
+
+![image](https://github.com/AHEQIRUI/chinese_chess_robot/blob/main/demo/demo2.gif)
+
 ## System Architecture
 
 ```
@@ -192,9 +197,3 @@ nc -zv 192.168.137.60 5000
 ## Related Documentation
 
 - [开发文档.md](开发文档.md) - Detailed technical documentation (Chinese)
-
-## Demo
-
-![image](https://github.com/AHEQIRUI/chinese_chess_robot/blob/main/demo/demo1.gif)
-
-![image](https://github.com/AHEQIRUI/chinese_chess_robot/blob/main/demo/demo2.gif)
