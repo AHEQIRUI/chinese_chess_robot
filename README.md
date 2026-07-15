@@ -43,58 +43,6 @@ This system implements an autonomous Chinese Chess playing robot arm system, run
 | USB Camera | Mounted on robot arm tip |
 | Air Pump + GPIO Control | Piece suction |
 
-## Quick Start
-
-### 1. Environment Requirements
-
-**PC (Client):**
-- Python 3.8+
-- OpenCV
-- NumPy
-
-**Raspberry Pi (Server):**
-- Python 3.8+
-- OpenCV
-- NumPy
-- RPi.GPIO
-- smbus2
-
-### 2. Install Dependencies
-
-```bash
-# PC
-pip install opencv-python numpy
-
-# Raspberry Pi
-pip install opencv-python numpy RPi.GPIO smbus2
-```
-
-### 3. Start Server (Raspberry Pi)
-
-```bash
-python chess_arm_server.py --port 5000
-```
-
-### 4. Start Client (PC)
-
-Red side (first move):
-```bash
-python chess_arm_client.py --host 192.168.137.60 --color red
-```
-
-Black side (second move):
-```bash
-python chess_arm_client.py --host 192.168.137.60 --color black
-```
-
-### 5. Client Controls
-
-| Key | Action |
-|-----|--------|
-| `r` | Detect board and get move |
-| `g` | Execute move |
-| `q` | Cancel and quit |
-| `r` (during confirmation) | Refresh and redetect board |
 
 ## Directory Structure
 
@@ -179,11 +127,6 @@ ping 192.168.137.60
 nc -zv 192.168.137.60 5000
 ```
 
-### Coordinate Errors
-- Check origin settings in `board_to_robot.py`
-- Verify `rotate_move_180` correctly handles black side
-- Compare displayed coordinates with actual board positions
-
 ### IK No Solution
 - Check if target coordinates are within robot arm working range
 - Adjust `z_correction_factor` parameter
@@ -197,3 +140,56 @@ nc -zv 192.168.137.60 5000
 ## Related Documentation
 
 - [开发文档.md](开发文档.md) - Detailed technical documentation (Chinese)
+
+## Quick Start
+
+### 1. Environment Requirements
+
+**PC (Client):**
+- Python 3.8+
+- OpenCV
+- NumPy
+
+**Raspberry Pi (Server):**
+- Python 3.8+
+- OpenCV
+- NumPy
+- RPi.GPIO
+- smbus2
+
+### 2. Install Dependencies
+
+```bash
+# PC
+pip install opencv-python numpy
+
+# Raspberry Pi
+pip install opencv-python numpy RPi.GPIO smbus2
+```
+
+### 3. Start Server (Raspberry Pi)
+
+```bash
+python chess_arm_server.py --port 5000
+```
+
+### 4. Start Client (PC)
+
+Red side (first move):
+```bash
+python chess_arm_client.py --host 192.168.137.60 --color red
+```
+
+Black side (second move):
+```bash
+python chess_arm_client.py --host 192.168.137.60 --color black
+```
+
+### 5. Client Controls
+
+| Key | Action |
+|-----|--------|
+| `r` | Detect board and get move |
+| `g` | Execute move |
+| `q` | Cancel and quit |
+| `r` (during confirmation) | Refresh and redetect board |
