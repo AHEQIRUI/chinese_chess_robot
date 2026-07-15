@@ -192,3 +192,7 @@ nc -zv 192.168.137.60 5000
 ## Related Documentation
 
 - [开发文档.md](开发文档.md) - Detailed technical documentation (Chinese)
+
+## Demo
+
+[demo/demo1.gif]
