@@ -1,8 +1,6 @@
 # Camera FEN 模块交接文档
 
 **项目:** 中国象棋棋盘识别 - USB摄像头FEN输出模块
-**交接日期:** 2026-05-17
-**交接人:** AHEQIRUI
 
 ---
 
@@ -138,7 +136,3 @@ class ChessboardDetector:
 - `docs/superpowers/plans/2026-05-17-camera-fen-plan.md` - 实现计划
 
 ---
-
-## 7. 联系方式
-
-如有疑问请查看项目历史 `HISTORY.md` 或联系交接人。
